@@ -226,19 +226,14 @@ export class SummariesService {
   }
 
   async generateSummaryName(summary: string) {
-    const response = await this.openAiClient.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content:
-            "Please give a name of up to 50 characters for this summary: \n \n " +
-            summary,
-        },
-      ],
+    const response = await this.openAiClient.createCompletion({
+      model: "text-curie-001",
+      prompt:
+        "Please give a name containing 30 to 50 characters that outlines what the following list is about: \n \n" +
+        summary,
     });
 
-    return response.data.choices[0].message?.content;
+    return response.data.choices[0].text?.trim();
   }
 
   async generateSummaryForText(
@@ -249,7 +244,7 @@ export class SummariesService {
       // create a summary using a weaker model
 
       const response = await this.openAiClient.createCompletion({
-        model: "ada",
+        model: "text-ada-001",
         prompt: `You are acting as a summarization AI, so take the input and summarize it in as many bullet points as is necessary to get all of the major points across:  \n \n ${text}`,
       });
 
