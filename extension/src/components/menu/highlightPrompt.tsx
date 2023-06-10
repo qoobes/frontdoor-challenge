@@ -24,7 +24,7 @@ export const HighlightPrompt: React.FC<Props> = ({ modal, setModal }) => {
 
     getSummaries({
       text: highlight,
-      precision: 1,
+      precision: 0,
       queryClient,
       onError: () => {
         setModal(ModalStates.GENERATE_SUMMARY_FAILURE);
