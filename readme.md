@@ -2,6 +2,15 @@
 
 Legere means something in latin. It's fancy.
 
+Basically, this was a project I did for a company I was applying to. Should I have spent two whole days without getting paid? Probably not. So I'm using it again to show you I know what I'm doing. Attached below is a video of me explaining the thing I built (chrome extension), and a link to the notion doc they gave me as a guide for what to built. Enjoy!
+
+PS> if you wish to run this by yourself, there's a section on that below.
+
+
+[Youtube video](https://www.youtube.com/watch?v=7AbiB_wOXys)
+
+[Notion guide for the task presented above](https://elastic-delivery-6c3.notion.site/FS-Technical-Challenge-47598274286f44b290c2fbff2f111863)
+
 ## How do I run this?
 
 Welp, first get your server started!
